@@ -1,8 +1,8 @@
 <html>
  <head>
-  <title>PHP test</title>
+  <title>PHP AWS test app</title>
  </head>
  <body>
- <?php echo '<p>Hello World PHP</p>'; ?>
+ <?php echo '<p>Hello World AWS PHP app</p>'; ?>
  </body>
 </html>
