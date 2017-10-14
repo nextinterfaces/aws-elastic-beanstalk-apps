@@ -2,22 +2,6 @@
 
 This repo contains sample hello world elastic beanstalk applications on variety of languages
 
-## bash commands
-
-```
-ssh -i "~/.ssh/<the-aws-key-pair-pem-file>.pem" ec2-user@52.41.70.74 // depending on instance may be "ubuntu" user
-
-// add the ssh-key in session
-ssh-add -l
-ssh-add ~/.ssh/<the-aws-key-pair-pem-file>.pem
-
-// ssh key no longer needed
-ssh ec2-user@52.41.70.74
-ssh ec2-user@ec2-52-25-101-175.us-west-2.compute.amazonaws.com
-
-ssh ubuntu@52.25.101.175
-```
-
 ## Elastic Beanstalk commands
 ```
 eb init
@@ -38,3 +22,19 @@ eb deploy <app-environment>
 - youtube: Amazon AWS Tutorial #2- Custom AMIs and Auto-Scaling Groups
 - youtube: Amazon AWS Tutorial #3- Attaching an Elastic Load Balancer to your Auto-Scaling Group
 
+
+## misc aws bash commands
+
+```
+ssh -i "~/.ssh/<the-aws-key-pair-pem-file>.pem" ec2-user@52.41.70.74 // depending on instance may be "ubuntu" user
+
+// add the ssh-key in session
+ssh-add -l
+ssh-add ~/.ssh/<the-aws-key-pair-pem-file>.pem
+
+// ssh key no longer needed
+ssh ec2-user@52.41.70.74
+ssh ec2-user@ec2-52-25-101-175.us-west-2.compute.amazonaws.com
+
+ssh ubuntu@52.25.101.175
+```

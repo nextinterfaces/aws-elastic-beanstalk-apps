@@ -1,7 +1,7 @@
 ```
 eb init
 
-eb create 1-php-app-DEV
+eb create 2-php-app-DEV
 
-eb deploy 1-php-app-DEV
+eb deploy 2-php-app-DEV
 ```

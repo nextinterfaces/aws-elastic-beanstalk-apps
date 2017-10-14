@@ -1,7 +1,16 @@
-# base-docker
-This is base hello world for building and deploying a Node.JS app on docker
+This is a hello world node.js app ready for Docker/Elastic Beanstalk deployment.
 
-## Building the image
+## Deploy on Elastic Beanstalk
+
+```
+eb init
+
+eb create 4-single-docker-nodejs-app-DEV
+
+eb deploy 4-single-docker-nodejs-app-DEV
+```
+
+## Deploy to docker locally
 Run the following command to build the Docker image. The -t flag lets you tag your image so it's easier to find later using the docker images command:
 
     $ docker build -t nextinterfaces/node-web-app .
@@ -10,17 +19,17 @@ Run the following command to build the Docker image. The -t flag lets you tag yo
     $ docker images
 
 ## Run the image
-    $ docker run -p 49160:8080 -d nextinterfaces/node-web-app
+    $ docker run -p 49160:80 -d nextinterfaces/node-web-app
 
 ## Print the output of the app
-    # Get container ID
+    # Get the container ID
     $ docker ps
-
-    # Example
-    Running on http://localhost:8080
 
     # Enter the container
     $ docker exec -it <container id> /bin/bash
+
+    # Example
+    Running on http://localhost:80
 
 ## Logging
     # Print app output
@@ -33,6 +42,9 @@ Run the following command to build the Docker image. The -t flag lets you tag yo
     https://docs.docker.com/engine/admin/logging/overview/
 
 ## Stop and Deleting containers
+    # List all containers
+    $ docker ps -a
+
     # removing all containers that are not running:
     $ docker rm `docker ps -aq --no-trunc --filter "status=exited"`
 
@@ -42,7 +54,7 @@ Run the following command to build the Docker image. The -t flag lets you tag yo
     # To stops all running containers
     $ docker stop `docker ps -q`
 
-In the example above, Docker mapped the `8080` port inside of the container to the port `49160` on your machine.
+In the example above, Docker mapped the `80` port inside of the container to the port `49160` on your machine.
 
 `
     $ curl -i localhost:49160
