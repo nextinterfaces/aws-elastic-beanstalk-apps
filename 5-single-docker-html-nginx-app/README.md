@@ -19,5 +19,5 @@ Run the following command to build the Docker image. The -t flag lets you tag yo
     $ docker run -p 49100:80 -d nextinterfaces/2048-game
 
 ## Open locally
-    # http://localhost:49100
+    http://localhost:49100
 
