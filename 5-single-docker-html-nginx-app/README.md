@@ -1,4 +1,3 @@
-# base-docker
 This is 2048 JS game ready for deploy on a Nginx, Docker, AWS Beanstalk instance
 
 ## Deploy on Elastic Beanstalk
